@@ -1,0 +1,40 @@
+{
+    "pattern": "{element}{sentinels}{faun}{flora}",
+    "data": {
+        "element": {
+            "if": {
+                "name": "Ifrit",
+                "description": "Seigneur des flamme"
+            },
+            "si":  {
+                "name": "Shiva",
+                "description": "Déesse de la glace"
+            },
+            "ra": {
+                "name": "Rhamu",
+                "description": "Dieu de la foudre"
+            },
+            "ga": {
+                "name": "Garuda",
+                "description": "Souffleuse des raffale"
+            },
+            "ti": {
+                "name": "Titan",
+                "description": "Ebranleur de la terre"
+            },
+            "le": {
+                "name": "Leviathan",
+                "description": "Dieu de l'eau"
+            },
+
+            "ba": {
+                "name": "Bahamut",
+                "description": "Roi des dieux, destructeur"
+            },
+            "od": {
+                "name": "Odin",
+                "description": "Dieu de la mort"
+            }
+        }
+    }
+}
