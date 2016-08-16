@@ -112,7 +112,7 @@ var helper = {
 
         if (legend) {
             legendElement = this.createElement('legend');
-            legendElement.append(document.createTextNode(legend));
+            legendElement.appendChild(document.createTextNode(legend));
             fieldsetElement.appendChild(legendElement);
         }
 
@@ -122,26 +122,26 @@ var helper = {
 
         var
             id = name + '-' + value,
-            inputElement = helper.createElement('input', {
+            inputElement = this.createElement('input', {
                 "type": type || "text",
                 "name": name,
                 "value": value,
                 "id": id
             }),
-            wrapperElement = helper.createElement('div')
+            wrapperElement = this.createElement('div')
             ;
 
         wrapperElement.appendChild(inputElement);
 
         if (label) {
-            var labelElement = helper.createElement('label', {"for": id});
+            var labelElement = this.createElement('label', {"for": id});
             labelElement.appendChild(document.createTextNode(label));
 
             wrapperElement.appendChild(labelElement);
         }
 
         if (description) {
-            var descriptionElement = helper.createElement('p');
+            var descriptionElement = this.createElement('p');
             descriptionElement.appendChild(document.createTextNode(description));
             wrapperElement.appendChild(descriptionElement);
         }
