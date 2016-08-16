@@ -6,8 +6,9 @@ helper.ready(function () {
         var data = settings.data;
 
         helper.each(data, function (setName, setDatas) {
+            var fieldset = helper.createFieldset(setName);
             helper.each(setDatas, function (value, text) {
-                placeholder.appendChild(helper.createInputElement(
+                fieldset.appendChild(helper.createInputElement(
                     setName,
                     value,
                     text.name,
@@ -15,6 +16,8 @@ helper.ready(function () {
                     text.description
                 ));
             });
+
+            placeholder.appendChild(fieldset);
         });
     });
 

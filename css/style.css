@@ -1,3 +1,7 @@
 #generator-placeholder div p {
     margin: 0;
 }
+
+#generator-placeholder fieldset {
+    float: left;
+}

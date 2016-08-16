@@ -1,12 +1,12 @@
 {
-    "pattern": "{element}{sentinels}{faun}{flora}",
+    "pattern": "{element}{atmosphere}{sentinels}{faun}{flora}",
     "data": {
         "element": {
-            "if": {
+            "fi": {
                 "name": "Ifrit",
                 "description": "Seigneur des flamme"
             },
-            "si":  {
+            "si": {
                 "name": "Shiva",
                 "description": "Déesse de la glace"
             },
@@ -26,14 +26,50 @@
                 "name": "Leviathan",
                 "description": "Dieu de l'eau"
             },
-
             "ba": {
                 "name": "Bahamut",
                 "description": "Roi des dieux, destructeur"
             },
-            "od": {
+            "di": {
                 "name": "Odin",
                 "description": "Dieu de la mort"
+            }
+        },
+        "atmosphere": {
+            "sa": {
+                "name": "safe"
+            },
+            "co": {
+                "name": "cold"
+            },
+            "ho": {
+                "name": "hot"
+            },
+            "to": {
+                "name": "toxic"
+            },
+            "ra": {
+                "name": "radiation"
+            }
+        },
+        "sentinels": {
+            "l": {
+                "name": "aucune"
+            },
+            "f": {
+                "name": "peu"
+            },
+            "t": {
+                "name": "typique"
+            },
+            "m": {
+                "name": "moyenne"
+            },
+            "d": {
+                "name": "dangereuses"
+            },
+            "h": {
+                "name": "très dangereuses"
             }
         }
     }

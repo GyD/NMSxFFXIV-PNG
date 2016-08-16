@@ -105,13 +105,23 @@ var helper = {
 
         return element;
     },
-    "createFieldset": function () {
+    "createFieldset": function (legend) {
+        var fieldsetElement = this.createElement('fieldset'),
+            legendElement = null
+            ;
 
+        if (legend) {
+            legendElement = this.createElement('legend');
+            legendElement.append(document.createTextNode(legend));
+            fieldsetElement.appendChild(legendElement);
+        }
+
+        return fieldsetElement;
     },
     "createInputElement": function (name, value, label, type, description) {
 
         var
-            id = name + '-' +  value,
+            id = name + '-' + value,
             inputElement = helper.createElement('input', {
                 "type": type || "text",
                 "name": name,
@@ -119,7 +129,7 @@ var helper = {
                 "id": id
             }),
             wrapperElement = helper.createElement('div')
-        ;
+            ;
 
         wrapperElement.appendChild(inputElement);
 
@@ -130,7 +140,7 @@ var helper = {
             wrapperElement.appendChild(labelElement);
         }
 
-        if( description ){
+        if (description) {
             var descriptionElement = helper.createElement('p');
             descriptionElement.appendChild(document.createTextNode(description));
             wrapperElement.appendChild(descriptionElement);
