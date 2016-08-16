@@ -1,5 +1,5 @@
 {
-    "pattern": "{element}{atmosphere}{sentinels}{faun}{flora}",
+    "pattern": "{element}{atmosphere}{sentinels}{faunaflora} {atlasmonolith}{direction}-{date}",
     "data": {
         "element": {
             "fi": {
@@ -70,6 +70,48 @@
             },
             "h": {
                 "name": "très dangereuses"
+            }
+        },
+        "faunaflora": {
+            "a": {
+                "name": "Les deux"
+            },
+            "e": {
+                "name": "Seulement des flore"
+            },
+            "i": {
+                "name": "Seulement de la faune"
+            },
+            "u": {
+                "name": "Aucun des deux"
+            }
+        },
+        "atlasmonolith": {
+            "N": {
+                "name": "aucun"
+            },
+            "M": {
+                "name": "présent(s) (Monolith)"
+            }
+        },
+        "direction": {
+            "C": {
+                "name": "Centre de l'univers"
+            },
+            "E": {
+                "name": "bords de l'univers (Edge)"
+            },
+            "A": {
+                "name": "interface Atlas"
+            },
+            "M": {
+                "name": "exploration/déplacement (Move)"
+            },
+            "S": {
+                "name": "reste dans le Système solaire"
+            },
+            "P": {
+                "name": "prend un Portail"
             }
         }
     }

@@ -148,5 +148,8 @@ var helper = {
 
 
         return wrapperElement;
+    },
+    "twodigit": function(number){
+        return ("0" + number).slice(-2);
     }
 };
