@@ -16,8 +16,8 @@ helper.ready(function () {
 
                 var dateArray = [
                     date.getUTCFullYear().toString().substring(2,4),
-                    helper.twodigit(date.getUTCMonth()),
-                    helper.twodigit(date.getUTCDay())
+                    helper.twodigit(date.getUTCMonth()+1),
+                    helper.twodigit(date.getUTCDate())
                 ];
 
                 pattern = pattern.replace('{date}', dateArray.join(''));
