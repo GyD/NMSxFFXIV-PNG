@@ -1,0 +1,3 @@
+[submodule "js/sel"]
+	path = js/sel
+	url = git@github.com:GyD/Sel.js.git
