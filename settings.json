@@ -1,118 +1,140 @@
 {
-    "pattern": "{element}{atmosphere}{sentinels}{faunaflora} {atlasmonolith}{direction}-{date}",
+    "pattern": "{EL}{AT}{S}{F} {RESOURCE} {M}{D}-{date}",
     "data": {
-        "element": {
-            "fi": {
-                "name": "Ifrit",
-                "description": "Seigneur des flamme"
-            },
-            "si": {
-                "name": "Shiva",
-                "description": "Déesse de la glace"
-            },
-            "ra": {
-                "name": "Rhamu",
-                "description": "Dieu de la foudre"
-            },
-            "ga": {
-                "name": "Garuda",
-                "description": "Souffleuse des raffale"
-            },
-            "ti": {
-                "name": "Titan",
-                "description": "Ebranleur de la terre"
-            },
-            "le": {
-                "name": "Leviathan",
-                "description": "Dieu de l'eau"
-            },
-            "ba": {
-                "name": "Bahamut",
-                "description": "Roi des dieux, destructeur"
-            },
-            "di": {
-                "name": "Odin",
-                "description": "Dieu de la mort"
+        "EL": {
+            "name": "element",
+            "data": {
+                "fi": {
+                    "name": "Ifrit",
+                    "description": "Seigneur des flamme"
+                },
+                "si": {
+                    "name": "Shiva",
+                    "description": "Déesse de la glace"
+                },
+                "ra": {
+                    "name": "Rhamu",
+                    "description": "Dieu de la foudre"
+                },
+                "ga": {
+                    "name": "Garuda",
+                    "description": "Souffleuse des raffale"
+                },
+                "ti": {
+                    "name": "Titan",
+                    "description": "Ebranleur de la terre"
+                },
+                "le": {
+                    "name": "Leviathan",
+                    "description": "Dieu de l'eau"
+                },
+                "ba": {
+                    "name": "Bahamut",
+                    "description": "Roi des dieux, destructeur"
+                },
+                "di": {
+                    "name": "Odin",
+                    "description": "Dieu de la mort"
+                },
+                "bi": {
+                    "name": "Bismark",
+                    "description": "Dieu des nuages (îles flotantes)"
+                }
             }
         },
-        "atmosphere": {
-            "sa": {
-                "name": "safe"
-            },
-            "co": {
-                "name": "cold"
-            },
-            "ho": {
-                "name": "hot"
-            },
-            "to": {
-                "name": "toxic"
-            },
-            "ra": {
-                "name": "radiation"
+        "AT": {
+            "name": "atmosphere",
+            "data": {
+                "sa": {
+                    "name": "safe"
+                },
+                "co": {
+                    "name": "cold"
+                },
+                "ho": {
+                    "name": "hot"
+                },
+                "to": {
+                    "name": "toxic"
+                },
+                "ra": {
+                    "name": "radiation"
+                }
             }
         },
-        "sentinels": {
-            "l": {
-                "name": "aucune"
-            },
-            "f": {
-                "name": "peu"
-            },
-            "t": {
-                "name": "typique"
-            },
-            "m": {
-                "name": "moyenne"
-            },
-            "d": {
-                "name": "dangereuses"
-            },
-            "h": {
-                "name": "très dangereuses"
+        "S": {
+            "name": "sentinels",
+            "data": {
+                "l": {
+                    "name": "aucune"
+                },
+                "f": {
+                    "name": "peu"
+                },
+                "t": {
+                    "name": "typique"
+                },
+                "m": {
+                    "name": "moyenne"
+                },
+                "d": {
+                    "name": "dangereuses"
+                },
+                "h": {
+                    "name": "très dangereuses"
+                }
             }
         },
-        "faunaflora": {
-            "a": {
-                "name": "Les deux"
-            },
-            "e": {
-                "name": "Seulement des flore"
-            },
-            "i": {
-                "name": "Seulement de la faune"
-            },
-            "u": {
-                "name": "Aucun des deux"
+        "F": {
+            "name": "faune et flore",
+            "data": {
+                "a": {
+                    "name": "Les deux"
+                },
+                "e": {
+                    "name": "Seulement des flore"
+                },
+                "i": {
+                    "name": "Seulement de la faune"
+                },
+                "u": {
+                    "name": "Aucun des deux"
+                }
             }
         },
-        "atlasmonolith": {
-            "N": {
-                "name": "aucun"
-            },
-            "M": {
-                "name": "présent(s) (Monolith)"
+        "M": {
+            "name": "atlasmonolith",
+            "data": {
+                "N": {
+                    "name": "aucun"
+                },
+                "M": {
+                    "name": "présent(s) (Monolith)"
+                }
             }
         },
-        "direction": {
-            "C": {
-                "name": "Centre de l'univers"
-            },
-            "E": {
-                "name": "bords de l'univers (Edge)"
-            },
-            "A": {
-                "name": "interface Atlas"
-            },
-            "M": {
-                "name": "exploration/déplacement (Move)"
-            },
-            "S": {
-                "name": "reste dans le Système solaire"
-            },
-            "P": {
-                "name": "prend un Portail"
+        "D": {
+            "name": "direction",
+            "data": {
+                "C": {
+                    "name": "Centre de l'univers"
+                },
+                "E": {
+                    "name": "bords de l'univers (Edge)"
+                },
+                "A": {
+                    "name": "interface Atlas"
+                },
+                "M": {
+                    "name": "exploration/déplacement (Move)"
+                },
+                "S": {
+                    "name": "reste dans le Système solaire"
+                },
+                "P": {
+                    "name": "prend un Portail"
+                }
             }
-        }
+        },
     }
 }

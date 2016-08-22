@@ -1,4 +1,4 @@
-String.prototype.capitalize = function() {
+String.prototype.capitalize = function () {
     return this.charAt(0).toUpperCase() + this.slice(1);
 };
 
@@ -67,12 +67,18 @@ Sel(document).on('ready', function () {
         return wrapperElement;
     };
 
-    var twodigit = function(number){
+    /**
+     * force number to be in 2 digits
+     * @param number
+     * @returns {string}
+     */
+    var twodigit = function (number) {
         return ("0" + number).slice(-2);
     };
 
     /** placeholder element */
-    var placeholder = Sel('#generator-placeholder');
+    var placeholder = Sel('#generator-placeholder'),
+        planetNameElement = Sel('#planetName');
 
     Poivre.ajax({
         "url": 'settings.json',
@@ -83,8 +89,8 @@ Sel(document).on('ready', function () {
                 build = function () {
                     var formElements = Sel("input:checked"),
                         pattern = settings.pattern,
-                        date = new Date();
-                    ;
+                        date = new Date()
+                        ;
 
                     var dateArray = [
                         date.getUTCFullYear().toString().substring(2, 4),
@@ -104,23 +110,47 @@ Sel(document).on('ready', function () {
                         pattern = pattern.replace('{' + setName + '}', '');
                     });
 
-                    var planetNameElement = document.getElementById('planetName');
-                    planetNameElement.value = pattern.capitalize();
+                    planetNameElement.set('value', pattern.capitalize());
+                },
+                decode = function () {
+                    var pattern = settings.pattern.replace(/}{/g, "|").replace(/{|}/g, "|"),
+                        patternArray = pattern.split('|')
+                        ;
+
+                    var startPos = 0;
+
+                    Poivre.each(patternArray, function (k, v) {
+                        var planetName = planetNameElement.get('value').replace(/\W/g, '');
+
+                        v = v.replace(/\W/g, '');
+                        if (v != "") {
+                            var elementValue = planetName.substring(startPos, startPos + v.length),
+                                radioElement = Sel('[type="radio"][name="' + v + '"][value="' + elementValue + '"],[type="radio"][name="' + v + '"][value="' + elementValue.toLowerCase() + '"]')
+                                ;
+
+                            startPos += v.length;
+
+                            if (radioElement.length < 2) {
+                                radioElement.set('checked', 'checked');
+                            }
+                        }
+                    });
                 };
 
-            Poivre.each(data, function (setName, setDatas) {
-                var fiedlset = Sel(document.createElement('fieldset'))
+            Poivre.each(data, function (setCode, setSettings) {
+                var fiedlset = Poivre.new('fieldset')
                     .append(
-                        Sel(document.createElement('legend')).append(document.createTextNode(setName))
+                        Poivre.new('legend', setSettings.name)
                     );
 
-                Poivre.each(setDatas, function (value, text) {
-                    fiedlset.append(Poivre.createInputElement(setName, value, text.name, "radio", text.description));
+                Poivre.each(setSettings.data, function (value, text) {
+                    fiedlset.append(Poivre.createInputElement(setCode, value, text.name, "radio", text.description));
                 });
                 placeholder.append(fiedlset);
             });
 
             placeholder.find('input').on('click', build);
+            planetNameElement.on('keyup', decode);
         }
     });
 });
