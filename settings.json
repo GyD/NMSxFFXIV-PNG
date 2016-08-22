@@ -102,10 +102,12 @@
                 }
             }
         },
-        
+
 
         "RESOURCE": {
             "name": "resources",
+            "multiple": true,
+            "max": 4,
             "data": {
                 "Ca": {
                     "name": "Callum"

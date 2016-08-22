@@ -100,14 +100,22 @@ Sel(document).on('ready', function () {
 
                     pattern = pattern.replace('{date}', dateArray.join(''));
 
-                    Poivre.each(formElements, function (k, formElement) {
-                        var name = formElement.name;
-                        pattern = pattern.replace('{' + name + '}', formElement.value);
+                    Poivre.each(data, function (setCode, setDatas) {
+                        var multiple = setDatas.multiple || false,
+                            max = setDatas.max || 1,
+                            inputType = (multiple) ? "checkbox" : "radio";
 
-                    });
+                        var value = [];
 
-                    Poivre.each(data, function (setName, setDatas) {
-                        pattern = pattern.replace('{' + setName + '}', '');
+                        Sel('[type="' + inputType + '"][name="' + setCode + '"]', formElements).each(function(k, v){
+                            if( k < max){
+                                value.push(this.value);
+                            }else{
+                                v.checked = false;
+                            }
+                        });
+
+                        pattern = pattern.replace('{' + setCode + '}', value.join(''));
                     });
 
                     planetNameElement.set('value', pattern.capitalize());
@@ -139,12 +147,15 @@ Sel(document).on('ready', function () {
 
             Poivre.each(data, function (setCode, setSettings) {
                 var fiedlset = Poivre.new('fieldset')
-                    .append(
-                        Poivre.new('legend', setSettings.name)
-                    );
+                        .append(
+                            Poivre.new('legend', setSettings.name)
+                        ),
+                    multiple = setSettings.multiple || false
+                    ;
 
                 Poivre.each(setSettings.data, function (value, text) {
-                    fiedlset.append(Poivre.createInputElement(setCode, value, text.name, "radio", text.description));
+                    var type = (multiple) ? "checkbox" : "radio";
+                    fiedlset.append(Poivre.createInputElement(setCode, value, text.name, type, text.description));
                 });
                 placeholder.append(fiedlset);
             });
