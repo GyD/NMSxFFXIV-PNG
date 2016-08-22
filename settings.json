@@ -136,5 +136,68 @@
                 }
             }
         },
+
+        "RESOURCE": {
+            "name": "resources",
+            "data": {
+                "Ca": {
+                    "name": "Callum"
+                },
+                "Ra": {
+                    "name": "Radnox"
+                },
+                "Mu": {
+                    "name": "Murrine"
+                },
+                "Om": {
+                    "name": "Omegon"
+                },
+                "He": {
+                    "name": "Heridium"
+                },
+                "Pt": {
+                    "name": "Platine"
+                },
+                "Ch": {
+                    "name": "Chrysonite"
+                },
+                "Ir": {
+                    "name": "Iridium"
+                },
+                "Al": {
+                    "name": "Aluminium"
+                },
+                "Cu": {
+                    "name": "Copper"
+                },
+                "Au": {
+                    "name": "Gold"
+                },
+                "Ni": {
+                    "name": "Nickel"
+                },
+                "Em": {
+                    "name": "Emeril"
+                },
+                "Fe": {
+                    "name": "Iron"
+                },
+                "Zn": {
+                    "name": "Zinc"
+                },
+                "Ti": {
+                    "name": "Titanium"
+                },
+                "C_": {
+                    "name": "Carbon"
+                },
+                "Th": {
+                    "name": "Thanium9"
+                },
+                "Pu": {
+                    "name": "Plutonium"
+                }
+            }
+        }
     }
 }
