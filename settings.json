@@ -1,5 +1,5 @@
 {
-    "pattern": "{EL}{AT}{S}{F} {RESOURCE} {M}{D}-{date}",
+    "pattern": "{EL}{AT}{S}{F} {RESOURCE}",
     "data": {
         "EL": {
             "name": "element",
@@ -102,40 +102,7 @@
                 }
             }
         },
-        "M": {
-            "name": "atlasmonolith",
-            "data": {
-                "N": {
-                    "name": "aucun"
-                },
-                "M": {
-                    "name": "présent(s) (Monolith)"
-                }
-            }
-        },
-        "D": {
-            "name": "direction",
-            "data": {
-                "C": {
-                    "name": "Centre de l'univers"
-                },
-                "E": {
-                    "name": "bords de l'univers (Edge)"
-                },
-                "A": {
-                    "name": "interface Atlas"
-                },
-                "M": {
-                    "name": "exploration/déplacement (Move)"
-                },
-                "S": {
-                    "name": "reste dans le Système solaire"
-                },
-                "P": {
-                    "name": "prend un Portail"
-                }
-            }
-        },
+        
 
         "RESOURCE": {
             "name": "resources",
